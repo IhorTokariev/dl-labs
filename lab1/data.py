@@ -20,7 +20,6 @@ def load_and_preprocess_iris():
     X_train, y_train = X[train_idx], y[train_idx]
     X_test, y_test = X[test_idx], y[test_idx]
 
-    # Стандартизація виключно за статистиками навчальної вибірки (ddof=0)
     mean = np.mean(X_train, axis=0)
     std = np.std(X_train, axis=0, ddof=0)
 
