@@ -73,7 +73,6 @@ def run_pipeline(intentional_error=False):
     print(f"\nNumPy Loss:   {loss_np:.15f}")
     print(f"PyTorch Loss: {loss_pt:.15f}")
 
-    # Таблиця 1: PyTorch
     print("\n" + "-" * 70)
     print("ТАБЛИЦЯ 1: ЗВІРКА З PYTORCH")
     print("-" * 70)
@@ -88,7 +87,6 @@ def run_pipeline(intentional_error=False):
         passed = (diff <= 1e-12)
         print(f"{'Градієнт ' + p:<15} | {diff:<32.5e} | {passed}")
 
-    # Таблиця 2: Чисельне диференціювання
     print("\n" + "-" * 70)
     print("ТАБЛИЦЯ 2: ЧИСЕЛЬНЕ ДИФЕРЕНЦІЮВАННЯ")
     print("-" * 70)
