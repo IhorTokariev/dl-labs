@@ -14,14 +14,11 @@ def initialize_parameters():
 
 
 def forward(X, params):
-    # Вхідний шар -> Прихований шар
     Z1 = X @ params["W1"] + params["b1"]
-    A1 = np.maximum(0.0, Z1)  # ReLU
+    A1 = np.maximum(0.0, Z1)
 
-    # Прихований шар -> Вихідні логіти
     Z2 = A1 @ params["W2"] + params["b2"]
 
-    # Збереження проміжних значень, критично необхідних для зворотного проходу
     cache = {
         "X": X,
         "Z1": Z1,
@@ -32,7 +29,6 @@ def forward(X, params):
 
 
 def compute_loss(Z2, y):
-    # Чисельно стабільний log-softmax зі зсувом на max(Z2)
     N = Z2.shape[0]
     shift_z = Z2 - np.max(Z2, axis=1, keepdims=True)
     exp_z = np.exp(shift_z)
@@ -49,22 +45,18 @@ def backward(cache, params, probs, y, intentional_error=False):
     A1 = cache["A1"]
     N = X.shape[0]
 
-    # Градієнт крос-ентропії за вихідними логітами
     dZ2 = probs.copy()
     dZ2[np.arange(N), y] -= 1.0
 
     if not intentional_error:
-        dZ2 /= N  # Усереднення за кількістю спостережень
+        dZ2 /= N
 
-    # Градієнти другого шару (використовують A1)
     dW2 = A1.T @ dZ2
     db2 = np.sum(dZ2, axis=0)
 
-    # Прохід крізь ReLU (використовує Z1 для перевірки умови Z1 > 0)
     dA1 = dZ2 @ params["W2"].T
     dZ1 = dA1 * (Z1 > 0.0).astype(np.float64)
 
-    # Градієнти першого шару (використовують вхідні дані X)
     dW1 = X.T @ dZ1
     db1 = np.sum(dZ1, axis=0)
 
