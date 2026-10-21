@@ -200,14 +200,3 @@ A перевіряє дві оцінки 0.7 з різними мітками. B
 ## 10. Використані інструменти
 
 Роботу виконано з допомогою генеративного інтелекту **ChatGpt**.
-
-### Файли
-
-- `lab2_starter.py`: незмінне одноразове навчання та завантаження прогнозів.
-- `lab2_analysis.py`: перевірки, пошук, тестова оцінка й збереження результатів без CSV; README не змінює.
-- `pyproject.toml`, `uv.lock`, `requirements.txt`, `.python-version`, `.gitignore`.
-- `README.md`, `ЛР2 завдання.pdf`.
-- `results/model.pt`, `predictions.npz`, `preprocessing.npz`, `run.json`, `split_summary.csv`.
-- `results/threshold_candidates.csv`, `threshold.json`, `validation_rules.csv`, `test_rules.csv`.
-- `results/pr_curve.png`, `roc_curve.png`, `sanity_checks.md`, `sanity_summary.csv`, `sanity_*_fast.csv`, `sanity_*_brute.csv`.
-- `results/error_examples.csv`, `error_summary.csv`, `decision_changes.csv`, `analysis_summary.json`.
