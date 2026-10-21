@@ -1,0 +1,7 @@
+{
+  "threshold": 0.031193923205137253,
+  "selected_on": "validation",
+  "rule": "s >= t",
+  "cost": "10*FN + FP",
+  "tie_break": "largest_threshold"
+}

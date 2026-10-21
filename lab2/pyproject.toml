@@ -1,0 +1,14 @@
+[project]
+name = "lab2"
+version = "0.1.0"
+description = "ЛР2: поріг рішення під асиметричну ціну помилок"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "matplotlib==3.11.2",
+    "numpy==2.5.4",
+    "pandas==3.0.6",
+    "scikit-learn==1.9.1",
+    "torch==2.14.1",
+]
+

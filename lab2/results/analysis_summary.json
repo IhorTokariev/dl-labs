@@ -1,0 +1,9 @@
+{
+  "threshold": 0.031193923205137253,
+  "validation_roc_auc": 0.97331771637308,
+  "validation_cost": 194,
+  "test_cost": 233,
+  "validation_candidate_count": 55989,
+  "sanity_checks_passed": true,
+  "prediction_sha256": "b237c8db2bacd4d66b7a2181b65c69c1d3fd56fa4f870f4a87f51cb7c8cff87e"
+}
