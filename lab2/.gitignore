@@ -1,0 +1,8 @@
+creditcard.csv
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+work/
+ЛР2 завдання.pdf
