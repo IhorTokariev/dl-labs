@@ -49,7 +49,6 @@
   },
   "specification_deviations": [],
   "readme_numbers_match_analysis_output": true,
-  "readme_sha256": "e7b9407182e2f257c3906536f1bd157d75f63a38917ed17d26e0c61754951c34",
   "analysis_portability": {
     "status": "OK",
     "tests_run": 7,
