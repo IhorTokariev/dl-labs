@@ -1,0 +1,199 @@
+{
+  "split_sha256": "148dad92de9a18670c177df9f8757aa6519fb0ea6d74a8ba723cfc4453f0a1bc",
+  "model_sha256": "7d1d2b54a326c40e4f1d60c5546c46c2e2bec80c58bbdf7a46a8d8c91cc78fa0",
+  "runs": [
+    {
+      "number": 1,
+      "regime": "scratch",
+      "seed": 1,
+      "train_loss": 1.0293043343226116,
+      "val_macro_f1": 0.5205202944552059,
+      "training_seconds": 49.61810070788488
+    },
+    {
+      "number": 2,
+      "regime": "frozen",
+      "seed": 1,
+      "train_loss": 0.16545249929030736,
+      "val_macro_f1": 0.8842012435043274,
+      "training_seconds": 24.758745125029236
+    },
+    {
+      "number": 3,
+      "regime": "frozen",
+      "seed": 2,
+      "train_loss": 0.17565550287564596,
+      "val_macro_f1": 0.8785003294351141,
+      "training_seconds": 24.39037604094483
+    },
+    {
+      "number": 4,
+      "regime": "frozen",
+      "seed": 3,
+      "train_loss": 0.18958316326141358,
+      "val_macro_f1": 0.8885955696095422,
+      "training_seconds": 24.527553708059713
+    },
+    {
+      "number": 5,
+      "regime": "unfreeze",
+      "seed": 1,
+      "train_loss": 0.06274096309517821,
+      "val_macro_f1": 0.888832309074926,
+      "training_seconds": 28.680214417167008
+    },
+    {
+      "number": 6,
+      "regime": "unfreeze",
+      "seed": 2,
+      "train_loss": 0.10887979151060184,
+      "val_macro_f1": 0.8884240043759988,
+      "training_seconds": 28.360316083068028
+    },
+    {
+      "number": 7,
+      "regime": "unfreeze",
+      "seed": 3,
+      "train_loss": 0.13212905461589494,
+      "val_macro_f1": 0.8905792704469713,
+      "training_seconds": 28.990703167160973
+    }
+  ],
+  "effects": {
+    "F_scratch_1": 0.5205202944552059,
+    "F_mean_frozen": 0.8837657141829945,
+    "R_frozen": 0.010095240174428088,
+    "F_mean_unfreeze": 0.8892785279659653,
+    "R_unfreeze": 0.0021552660709724947,
+    "R": 0.010095240174428088,
+    "delta_pre": 0.3632454197277887,
+    "delta_unf": 0.005512813782970749,
+    "sum": 0.3687582335107594,
+    "verdicts": {
+      "delta_pre": "ефект вартий перевірки, але не доведений",
+      "delta_unf": "не відрізняється від розкиду, результату немає"
+    }
+  },
+  "regime_means": {
+    "scratch": 0.5205202944552059,
+    "frozen": 0.8837657141829945,
+    "unfreeze": 0.8892785279659653
+  },
+  "selection_verification": {
+    "method": "cpu_validation_logits",
+    "rtol": 0.0001,
+    "atol": 0.0001,
+    "max_abs_difference": 6.29425048828125e-05,
+    "matching_predictions": 1498,
+    "validation_rows": 1498,
+    "requires_local_run_weights": false
+  },
+  "selected": {
+    "regime": "unfreeze",
+    "seed": 3,
+    "val_macro_f1": 0.8905792704469713
+  },
+  "test": {
+    "device": "cpu",
+    "dtype": "float32",
+    "n": 1502,
+    "macro_f1": 0.8794504017590516,
+    "accuracy": 0.877496671105193,
+    "correct": 1318,
+    "accuracy_standard_error": 0.008459831590263346,
+    "test_minus_val_macro_f1": -0.011128868687919624,
+    "confusion_matrix": [
+      [
+        200,
+        0,
+        1,
+        1,
+        1,
+        16
+      ],
+      [
+        0,
+        235,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        3,
+        0,
+        193,
+        72,
+        8,
+        1
+      ],
+      [
+        1,
+        0,
+        21,
+        238,
+        3,
+        0
+      ],
+      [
+        1,
+        2,
+        1,
+        8,
+        242,
+        1
+      ],
+      [
+        37,
+        2,
+        0,
+        1,
+        1,
+        210
+      ]
+    ],
+    "logits_sha256": "cab8588988b100d93cff35b00c88470da78a831862e3bcde999c3b2ba9e3eb14"
+  },
+  "errors": [
+    {
+      "file": "20164.jpg",
+      "true_class": "glacier",
+      "predicted_class": "mountain",
+      "probability": 0.5861214995384216,
+      "pair_count": 72,
+      "test_row_index": 500
+    },
+    {
+      "file": "20163.jpg",
+      "true_class": "street",
+      "predicted_class": "buildings",
+      "probability": 0.9863670468330383,
+      "pair_count": 37,
+      "test_row_index": 1329
+    },
+    {
+      "file": "20320.jpg",
+      "true_class": "mountain",
+      "predicted_class": "glacier",
+      "probability": 0.9992343187332153,
+      "pair_count": 21,
+      "test_row_index": 783
+    },
+    {
+      "file": "20246.jpg",
+      "true_class": "buildings",
+      "predicted_class": "street",
+      "probability": 0.9998188614845276,
+      "pair_count": 16,
+      "test_row_index": 130
+    },
+    {
+      "file": "20383.jpg",
+      "true_class": "glacier",
+      "predicted_class": "sea",
+      "probability": 0.6829771399497986,
+      "pair_count": 8,
+      "test_row_index": 524
+    }
+  ]
+}

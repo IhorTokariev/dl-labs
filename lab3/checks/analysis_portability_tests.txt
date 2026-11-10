@@ -1,0 +1,13 @@
+test_changed_prediction_is_rejected_even_with_close_logits (test_analysis_portability.AnalysisVerificationTests.test_changed_prediction_is_rejected_even_with_close_logits) ... ok
+test_different_model_logits_are_rejected (test_analysis_portability.AnalysisVerificationTests.test_different_model_logits_are_rejected) ... ok
+test_distributable_copy_runs_without_individual_weights (test_analysis_portability.AnalysisVerificationTests.test_distributable_copy_runs_without_individual_weights)
+Імітуємо файли після клонування; датасет читається з початкового шляху. ... ok
+test_incorrect_shape_is_rejected (test_analysis_portability.AnalysisVerificationTests.test_incorrect_shape_is_rejected) ... ok
+test_nonfinite_logits_are_rejected (test_analysis_portability.AnalysisVerificationTests.test_nonfinite_logits_are_rejected) ... ok
+test_small_device_roundoff_is_accepted (test_analysis_portability.AnalysisVerificationTests.test_small_device_roundoff_is_accepted) ... ok
+test_wrong_seed_is_rejected (test_analysis_portability.AnalysisVerificationTests.test_wrong_seed_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 22.765s
+
+OK

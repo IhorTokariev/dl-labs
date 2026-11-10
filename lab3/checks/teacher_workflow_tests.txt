@@ -1,0 +1,17 @@
+test_changed_prediction_is_rejected_even_with_close_logits (test_analysis_portability.AnalysisVerificationTests.test_changed_prediction_is_rejected_even_with_close_logits) ... ok
+test_different_model_logits_are_rejected (test_analysis_portability.AnalysisVerificationTests.test_different_model_logits_are_rejected) ... ok
+test_distributable_copy_runs_without_individual_weights (test_analysis_portability.AnalysisVerificationTests.test_distributable_copy_runs_without_individual_weights)
+Імітуємо файли після клонування; датасет читається з початкового шляху. ... ok
+test_incorrect_shape_is_rejected (test_analysis_portability.AnalysisVerificationTests.test_incorrect_shape_is_rejected) ... ok
+test_nonfinite_logits_are_rejected (test_analysis_portability.AnalysisVerificationTests.test_nonfinite_logits_are_rejected) ... ok
+test_small_device_roundoff_is_accepted (test_analysis_portability.AnalysisVerificationTests.test_small_device_roundoff_is_accepted) ... ok
+test_wrong_seed_is_rejected (test_analysis_portability.AnalysisVerificationTests.test_wrong_seed_is_rejected) ... ok
+test_existing_results_stop_before_any_checks_or_writes (test_teacher_commands.TeacherCommandsTests.test_existing_results_stop_before_any_checks_or_writes) ... ok
+test_fresh_training_routes_all_seven_runs_and_analysis_to_same_directory (test_teacher_commands.TeacherCommandsTests.test_fresh_training_routes_all_seven_runs_and_analysis_to_same_directory) ... ok
+test_result_directory_inside_dataset_is_rejected (test_teacher_commands.TeacherCommandsTests.test_result_directory_inside_dataset_is_rejected) ... ok
+test_resume_reuses_checks_and_skips_only_complete_runs_in_selected_directory (test_teacher_commands.TeacherCommandsTests.test_resume_reuses_checks_and_skips_only_complete_runs_in_selected_directory) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 45.787s
+
+OK

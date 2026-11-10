@@ -1,0 +1,533 @@
+{
+  "status": "OK",
+  "split_sha256": "148dad92de9a18670c177df9f8757aa6519fb0ea6d74a8ba723cfc4453f0a1bc",
+  "source_sha256": "b4928d67b5d7b46f44b1fdf46709eb54a66ea60c40d4ecb9c7eda45ae3f49296",
+  "device": "mps",
+  "split": {
+    "table": [
+      {
+        "class": "buildings",
+        "parts": [
+          {
+            "part": "train",
+            "count": 200,
+            "sum": 1996761,
+            "match": true
+          },
+          {
+            "part": "validation",
+            "count": 218,
+            "sum": 4837323,
+            "match": true
+          },
+          {
+            "part": "test",
+            "count": 219,
+            "sum": 4837559,
+            "match": true
+          }
+        ]
+      },
+      {
+        "class": "forest",
+        "parts": [
+          {
+            "part": "train",
+            "count": 200,
+            "sum": 2032625,
+            "match": true
+          },
+          {
+            "part": "validation",
+            "count": 237,
+            "sum": 5276962,
+            "match": true
+          },
+          {
+            "part": "test",
+            "count": 237,
+            "sum": 5291326,
+            "match": true
+          }
+        ]
+      },
+      {
+        "class": "glacier",
+        "parts": [
+          {
+            "part": "train",
+            "count": 200,
+            "sum": 2183923,
+            "match": true
+          },
+          {
+            "part": "validation",
+            "count": 276,
+            "sum": 6135652,
+            "match": true
+          },
+          {
+            "part": "test",
+            "count": 277,
+            "sum": 6157250,
+            "match": true
+          }
+        ]
+      },
+      {
+        "class": "mountain",
+        "parts": [
+          {
+            "part": "train",
+            "count": 200,
+            "sum": 1950345,
+            "match": true
+          },
+          {
+            "part": "validation",
+            "count": 262,
+            "sum": 5789535,
+            "match": true
+          },
+          {
+            "part": "test",
+            "count": 263,
+            "sum": 5849765,
+            "match": true
+          }
+        ]
+      },
+      {
+        "class": "sea",
+        "parts": [
+          {
+            "part": "train",
+            "count": 200,
+            "sum": 1987613,
+            "match": true
+          },
+          {
+            "part": "validation",
+            "count": 255,
+            "sum": 5655068,
+            "match": true
+          },
+          {
+            "part": "test",
+            "count": 255,
+            "sum": 5668011,
+            "match": true
+          }
+        ]
+      },
+      {
+        "class": "street",
+        "parts": [
+          {
+            "part": "train",
+            "count": 200,
+            "sum": 1841817,
+            "match": true
+          },
+          {
+            "part": "validation",
+            "count": 250,
+            "sum": 5541845,
+            "match": true
+          },
+          {
+            "part": "test",
+            "count": 251,
+            "sum": 5547533,
+            "match": true
+          }
+        ]
+      }
+    ],
+    "totals": [
+      {
+        "part": "train",
+        "count": 1200,
+        "sum": 11993084
+      },
+      {
+        "part": "validation",
+        "count": 1498,
+        "sum": 33236385
+      },
+      {
+        "part": "test",
+        "count": 1502,
+        "sum": 33351444
+      }
+    ],
+    "no_overlap": true,
+    "strict": true
+  },
+  "initial_losses": [
+    {
+      "regime": "scratch",
+      "seed": 1,
+      "loss": 2.047884464263916,
+      "ln6": 1.791759469228055,
+      "deviation": 0.25612499503586106
+    },
+    {
+      "regime": "frozen",
+      "seed": 1,
+      "loss": 1.9243943691253662,
+      "ln6": 1.791759469228055,
+      "deviation": 0.13263489989731125
+    }
+  ],
+  "parameters": [
+    {
+      "regime": "scratch",
+      "total_numel": 11179590,
+      "trainable_numel": 11179590,
+      "optimizer_groups": [
+        {
+          "numel": 11179590,
+          "parameter_names": [
+            "conv1.weight",
+            "bn1.weight",
+            "bn1.bias",
+            "layer1.0.conv1.weight",
+            "layer1.0.bn1.weight",
+            "layer1.0.bn1.bias",
+            "layer1.0.conv2.weight",
+            "layer1.0.bn2.weight",
+            "layer1.0.bn2.bias",
+            "layer1.1.conv1.weight",
+            "layer1.1.bn1.weight",
+            "layer1.1.bn1.bias",
+            "layer1.1.conv2.weight",
+            "layer1.1.bn2.weight",
+            "layer1.1.bn2.bias",
+            "layer2.0.conv1.weight",
+            "layer2.0.bn1.weight",
+            "layer2.0.bn1.bias",
+            "layer2.0.conv2.weight",
+            "layer2.0.bn2.weight",
+            "layer2.0.bn2.bias",
+            "layer2.0.downsample.0.weight",
+            "layer2.0.downsample.1.weight",
+            "layer2.0.downsample.1.bias",
+            "layer2.1.conv1.weight",
+            "layer2.1.bn1.weight",
+            "layer2.1.bn1.bias",
+            "layer2.1.conv2.weight",
+            "layer2.1.bn2.weight",
+            "layer2.1.bn2.bias",
+            "layer3.0.conv1.weight",
+            "layer3.0.bn1.weight",
+            "layer3.0.bn1.bias",
+            "layer3.0.conv2.weight",
+            "layer3.0.bn2.weight",
+            "layer3.0.bn2.bias",
+            "layer3.0.downsample.0.weight",
+            "layer3.0.downsample.1.weight",
+            "layer3.0.downsample.1.bias",
+            "layer3.1.conv1.weight",
+            "layer3.1.bn1.weight",
+            "layer3.1.bn1.bias",
+            "layer3.1.conv2.weight",
+            "layer3.1.bn2.weight",
+            "layer3.1.bn2.bias",
+            "layer4.0.conv1.weight",
+            "layer4.0.bn1.weight",
+            "layer4.0.bn1.bias",
+            "layer4.0.conv2.weight",
+            "layer4.0.bn2.weight",
+            "layer4.0.bn2.bias",
+            "layer4.0.downsample.0.weight",
+            "layer4.0.downsample.1.weight",
+            "layer4.0.downsample.1.bias",
+            "layer4.1.conv1.weight",
+            "layer4.1.bn1.weight",
+            "layer4.1.bn1.bias",
+            "layer4.1.conv2.weight",
+            "layer4.1.bn2.weight",
+            "layer4.1.bn2.bias",
+            "fc.weight",
+            "fc.bias"
+          ],
+          "lr": 0.003,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0.0001,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": true
+        }
+      ],
+      "match": true
+    },
+    {
+      "regime": "frozen",
+      "total_numel": 11179590,
+      "trainable_numel": 3078,
+      "optimizer_groups": [
+        {
+          "numel": 3078,
+          "parameter_names": [
+            "fc.weight",
+            "fc.bias"
+          ],
+          "lr": 0.003,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0.0001,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": true
+        }
+      ],
+      "match": true
+    },
+    {
+      "regime": "unfreeze",
+      "total_numel": 11179590,
+      "trainable_numel": 8396806,
+      "optimizer_groups": [
+        {
+          "numel": 3078,
+          "parameter_names": [
+            "fc.weight",
+            "fc.bias"
+          ],
+          "lr": 0.003,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0.0001,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": true
+        },
+        {
+          "numel": 8393728,
+          "parameter_names": [
+            "layer4.0.conv1.weight",
+            "layer4.0.bn1.weight",
+            "layer4.0.bn1.bias",
+            "layer4.0.conv2.weight",
+            "layer4.0.bn2.weight",
+            "layer4.0.bn2.bias",
+            "layer4.0.downsample.0.weight",
+            "layer4.0.downsample.1.weight",
+            "layer4.0.downsample.1.bias",
+            "layer4.1.conv1.weight",
+            "layer4.1.bn1.weight",
+            "layer4.1.bn1.bias",
+            "layer4.1.conv2.weight",
+            "layer4.1.bn2.weight",
+            "layer4.1.bn2.bias"
+          ],
+          "lr": 0.0003,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0.0001,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": true
+        }
+      ],
+      "match": true
+    }
+  ],
+  "changes": [
+    {
+      "regime": "frozen",
+      "module": "conv1",
+      "parameters_changed": false,
+      "bn_statistics_changed": null,
+      "match": true
+    },
+    {
+      "regime": "frozen",
+      "module": "bn1",
+      "parameters_changed": false,
+      "bn_statistics_changed": false,
+      "match": true
+    },
+    {
+      "regime": "frozen",
+      "module": "layer1",
+      "parameters_changed": false,
+      "bn_statistics_changed": false,
+      "match": true
+    },
+    {
+      "regime": "frozen",
+      "module": "layer2",
+      "parameters_changed": false,
+      "bn_statistics_changed": false,
+      "match": true
+    },
+    {
+      "regime": "frozen",
+      "module": "layer3",
+      "parameters_changed": false,
+      "bn_statistics_changed": false,
+      "match": true
+    },
+    {
+      "regime": "frozen",
+      "module": "layer4",
+      "parameters_changed": false,
+      "bn_statistics_changed": false,
+      "match": true
+    },
+    {
+      "regime": "frozen",
+      "module": "fc",
+      "parameters_changed": true,
+      "bn_statistics_changed": null,
+      "match": true
+    },
+    {
+      "regime": "unfreeze",
+      "module": "conv1",
+      "parameters_changed": false,
+      "bn_statistics_changed": null,
+      "match": true
+    },
+    {
+      "regime": "unfreeze",
+      "module": "bn1",
+      "parameters_changed": false,
+      "bn_statistics_changed": false,
+      "match": true
+    },
+    {
+      "regime": "unfreeze",
+      "module": "layer1",
+      "parameters_changed": false,
+      "bn_statistics_changed": false,
+      "match": true
+    },
+    {
+      "regime": "unfreeze",
+      "module": "layer2",
+      "parameters_changed": false,
+      "bn_statistics_changed": false,
+      "match": true
+    },
+    {
+      "regime": "unfreeze",
+      "module": "layer3",
+      "parameters_changed": false,
+      "bn_statistics_changed": false,
+      "match": true
+    },
+    {
+      "regime": "unfreeze",
+      "module": "layer4",
+      "parameters_changed": true,
+      "bn_statistics_changed": true,
+      "match": true
+    },
+    {
+      "regime": "unfreeze",
+      "module": "fc",
+      "parameters_changed": true,
+      "bn_statistics_changed": null,
+      "match": true
+    }
+  ],
+  "intentional_bn_error": {
+    "prediction_before_experiment": "Прогноз до запуску: параметри замороженого кістяка не зміняться, але його ковзні статистики BN змінюватимуться: це буфери, на які requires_grad не впливає. На кривій втрати train цю помилку, ймовірно, не буде помітно.",
+    "changes": [
+      {
+        "regime": "frozen",
+        "module": "conv1",
+        "parameters_changed": false,
+        "bn_statistics_changed": null,
+        "match": true
+      },
+      {
+        "regime": "frozen",
+        "module": "bn1",
+        "parameters_changed": false,
+        "bn_statistics_changed": true,
+        "match": true
+      },
+      {
+        "regime": "frozen",
+        "module": "layer1",
+        "parameters_changed": false,
+        "bn_statistics_changed": true,
+        "match": true
+      },
+      {
+        "regime": "frozen",
+        "module": "layer2",
+        "parameters_changed": false,
+        "bn_statistics_changed": true,
+        "match": true
+      },
+      {
+        "regime": "frozen",
+        "module": "layer3",
+        "parameters_changed": false,
+        "bn_statistics_changed": true,
+        "match": true
+      },
+      {
+        "regime": "frozen",
+        "module": "layer4",
+        "parameters_changed": false,
+        "bn_statistics_changed": true,
+        "match": true
+      },
+      {
+        "regime": "frozen",
+        "module": "fc",
+        "parameters_changed": true,
+        "bn_statistics_changed": null,
+        "match": true
+      }
+    ],
+    "five_train_losses": [
+      1.8869601488113403,
+      1.9456455707550049,
+      1.844244122505188,
+      1.6837120056152344,
+      1.4074041843414307
+    ],
+    "layer1.0.bn1_max_abs_change": {
+      "running_mean": 0.09283638000488281,
+      "running_var": 0.12031435966491699
+    },
+    "prediction_supported": true,
+    "curve_visibility": "П’ять кроків підтверджують зміну буферів; помітність на повній кривій не вимірювалася."
+  }
+}

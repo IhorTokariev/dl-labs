@@ -1,0 +1,351 @@
+{
+  "status": "complete",
+  "regime": "frozen",
+  "seed": 2,
+  "settings": {
+    "classes": [
+      "buildings",
+      "forest",
+      "glacier",
+      "mountain",
+      "sea",
+      "street"
+    ],
+    "model": "torchvision.models.resnet18",
+    "model_constructor_defaults": {
+      "progress": true,
+      "num_classes_before_fc_replacement": 1000,
+      "zero_init_residual": false,
+      "groups": 1,
+      "width_per_group": 64,
+      "replace_stride_with_dilation": null,
+      "norm_layer": "BatchNorm2d"
+    },
+    "weights": "ResNet18_Weights.IMAGENET1K_V1",
+    "fc": {
+      "in_features": 512,
+      "out_features": 6,
+      "bias": true,
+      "initialization": "torch.nn.Linear default"
+    },
+    "dtype": "float32",
+    "regime": "frozen",
+    "eval_modules_during_train": [
+      "conv1",
+      "bn1",
+      "layer1",
+      "layer2",
+      "layer3",
+      "layer4"
+    ],
+    "batchnorm": {
+      "momentum": 0.1,
+      "eps": 1e-05,
+      "affine": true,
+      "track_running_stats": true
+    },
+    "transforms": {
+      "train": [
+        {
+          "RandomResizedCrop": {
+            "size": [
+              160,
+              160
+            ],
+            "scale": [
+              0.7,
+              1.0
+            ],
+            "ratio": [
+              0.75,
+              1.3333333333333333
+            ],
+            "interpolation": "BILINEAR",
+            "antialias": true
+          }
+        },
+        {
+          "RandomHorizontalFlip": {
+            "p": 0.5
+          }
+        },
+        "ToTensor",
+        {
+          "Normalize": {
+            "mean": [
+              0.485,
+              0.456,
+              0.406
+            ],
+            "std": [
+              0.229,
+              0.224,
+              0.225
+            ],
+            "inplace": false
+          }
+        }
+      ],
+      "validation_test": [
+        {
+          "Resize": {
+            "size": [
+              160,
+              160
+            ],
+            "interpolation": "BILINEAR",
+            "max_size": null,
+            "antialias": true
+          }
+        },
+        "ToTensor",
+        {
+          "Normalize": {
+            "mean": [
+              0.485,
+              0.456,
+              0.406
+            ],
+            "std": [
+              0.229,
+              0.224,
+              0.225
+            ],
+            "inplace": false
+          }
+        }
+      ]
+    },
+    "optimizer": {
+      "class": "torch.optim.AdamW",
+      "groups": [
+        {
+          "numel": 3078,
+          "parameter_names": [
+            "fc.weight",
+            "fc.bias"
+          ],
+          "lr": 0.003,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0.0001,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": true
+        }
+      ],
+      "defaults": {
+        "lr": 0.001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0001,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true
+      }
+    },
+    "loss": {
+      "class": "CrossEntropyLoss",
+      "weight": null,
+      "size_average": null,
+      "ignore_index": -100,
+      "reduce": null,
+      "reduction": "mean",
+      "label_smoothing": 0.0
+    },
+    "loader": {
+      "train": {
+        "batch_size": 32,
+        "shuffle": true
+      },
+      "validation_test": {
+        "batch_size": 64,
+        "shuffle": false
+      },
+      "shared": {
+        "num_workers": 0,
+        "drop_last": false,
+        "pin_memory": false,
+        "timeout": 0,
+        "worker_init_fn": null,
+        "generator": null,
+        "custom_sampler": null,
+        "collate_fn": "default_collate",
+        "prefetch_factor": null,
+        "persistent_workers": false,
+        "multiprocessing_context": null,
+        "pin_memory_device": "",
+        "in_order": true
+      }
+    },
+    "epochs": 8,
+    "steps_per_epoch": 38,
+    "optimizer_steps": 304,
+    "last_batch_size": 16,
+    "zero_grad": {
+      "set_to_none": true
+    },
+    "macro_f1": {
+      "average": "macro",
+      "labels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "zero_division": 0
+    },
+    "scheduler": null,
+    "gradient_clipping": null,
+    "mixed_precision": false,
+    "early_stopping": false,
+    "checkpoint_selection": "final epoch only",
+    "seed_repeated_before_training": false,
+    "deterministic_algorithms": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": false
+  },
+  "parameter_counts": {
+    "regime": "frozen",
+    "total_numel": 11179590,
+    "trainable_numel": 3078,
+    "optimizer_groups": [
+      {
+        "numel": 3078,
+        "parameter_names": [
+          "fc.weight",
+          "fc.bias"
+        ],
+        "lr": 0.003,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0001,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true
+      }
+    ],
+    "match": true
+  },
+  "split_sha256": "148dad92de9a18670c177df9f8757aa6519fb0ea6d74a8ba723cfc4453f0a1bc",
+  "source_sha256": "b4928d67b5d7b46f44b1fdf46709eb54a66ea60c40d4ecb9c7eda45ae3f49296",
+  "git": {
+    "commit": null,
+    "uncommitted_changes": null,
+    "commit_unavailable": true,
+    "repository_unavailable": true
+  },
+  "environment": {
+    "python": "3.12.14",
+    "packages": {
+      "torch": "2.14.1",
+      "torchvision": "0.29.1",
+      "numpy": "2.5.4",
+      "scikit-learn": "1.9.1",
+      "matplotlib": "3.11.2",
+      "pillow": "12.3.0"
+    },
+    "device": "mps",
+    "device_name": "Apple M5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "dtype": "float32",
+    "PYTORCH_ENABLE_MPS_FALLBACK": null,
+    "torch_num_threads": 4,
+    "torch_num_interop_threads": 10
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6516484630107879,
+      "val_macro_f1": 0.8816264967248513,
+      "steps": 38,
+      "last_batch_size": 16,
+      "epoch_seconds": 3.1435878751799464
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.2803691550095876,
+      "val_macro_f1": 0.8849338238693268,
+      "steps": 38,
+      "last_batch_size": 16,
+      "epoch_seconds": 3.0370817501097918
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.24008991658687592,
+      "val_macro_f1": 0.8816294084865054,
+      "steps": 38,
+      "last_batch_size": 16,
+      "epoch_seconds": 3.027433458948508
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.21335913836956025,
+      "val_macro_f1": 0.8747753714730737,
+      "steps": 38,
+      "last_batch_size": 16,
+      "epoch_seconds": 3.073803042061627
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.2025463088353475,
+      "val_macro_f1": 0.8794458281898109,
+      "steps": 38,
+      "last_batch_size": 16,
+      "epoch_seconds": 3.0241006249561906
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.18306129654248557,
+      "val_macro_f1": 0.8837993490154835,
+      "steps": 38,
+      "last_batch_size": 16,
+      "epoch_seconds": 3.0333617080468684
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.1714610880613327,
+      "val_macro_f1": 0.8758980841850085,
+      "steps": 38,
+      "last_batch_size": 16,
+      "epoch_seconds": 3.0173307079821825
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.17565550287564596,
+      "val_macro_f1": 0.8785003294351141,
+      "steps": 38,
+      "last_batch_size": 16,
+      "epoch_seconds": 3.0333729591220617
+    }
+  ],
+  "training_seconds": 24.39037604094483,
+  "timing_definition": "Цикл 8 епох з train і validation; без побудови моделі й запису артефактів",
+  "optimizer_steps": 304,
+  "smoke": false,
+  "weights_sha256": "1e8500db2c8931c297d75f78dc42e1313abe7723333f98c6834f05ab794c9230",
+  "val_logits_sha256": "08e42c96c8bb5f5982991d56a3219bd90fc0af8171a763c1f906544d4afc15f1"
+}

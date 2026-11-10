@@ -1,0 +1,20 @@
+Середовище: {'python': '3.12.14', 'packages': {'torch': '2.14.1', 'torchvision': '0.29.1', 'numpy': '2.5.4', 'scikit-learn': '1.9.1', 'matplotlib': '3.11.2', 'pillow': '12.3.0'}, 'device': 'mps', 'device_name': 'Apple M5', 'platform': 'macOS-26.6.2-arm64-arm-64bit', 'dtype': 'float32', 'PYTORCH_ENABLE_MPS_FALLBACK': None, 'torch_num_threads': 4, 'torch_num_interop_threads': 10}
+Контроль поділу: клас | train | validation | test | збіг
+buildings  |  200 / 1996761 | 218 / 4837323 | 219 / 4837559  |  так
+forest  |  200 / 2032625 | 237 / 5276962 | 237 / 5291326  |  так
+glacier  |  200 / 2183923 | 276 / 6135652 | 277 / 6157250  |  так
+mountain  |  200 / 1950345 | 262 / 5789535 | 263 / 5849765  |  так
+sea  |  200 / 1987613 | 255 / 5655068 | 255 / 5668011  |  так
+street  |  200 / 1841817 | 250 / 5541845 | 251 / 5547533  |  так
+Разом: [{'part': 'train', 'count': 1200, 'sum': 11993084}, {'part': 'validation', 'count': 1498, 'sum': 33236385}, {'part': 'test', 'count': 1502, 'sum': 33351444}] ; перетинів немає
+--resume: перевірки зі статусом OK вже пройдено.
+--resume: пропущено завершений scratch_seed1
+--resume: пропущено завершений frozen_seed1
+--resume: пропущено завершений frozen_seed2
+--resume: пропущено завершений frozen_seed3
+--resume: пропущено завершений unfreeze_seed1
+--resume: пропущено завершений unfreeze_seed2
+--resume: пропущено завершений unfreeze_seed3
+Середні validation: {'scratch': 0.5205202944552059, 'frozen': 0.8837657141829945, 'unfreeze': 0.8892785279659653}
+Вибрано лише за validation: unfreeze_seed3
+TRAIN OK: рівно сім запусків, кожен 8 епох і 304 кроки. Test не обчислювався.

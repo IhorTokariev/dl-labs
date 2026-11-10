@@ -1,0 +1,97 @@
+Середовище: {'python': '3.12.14', 'packages': {'torch': '2.14.1', 'torchvision': '0.29.1', 'numpy': '2.5.4', 'scikit-learn': '1.9.1', 'matplotlib': '3.11.2', 'pillow': '12.3.0'}, 'device': 'mps', 'device_name': 'Apple M5', 'platform': 'macOS-26.6.2-arm64-arm-64bit', 'dtype': 'float32', 'PYTORCH_ENABLE_MPS_FALLBACK': None, 'torch_num_threads': 4, 'torch_num_interop_threads': 10}
+Контроль поділу: клас | train | validation | test | збіг
+buildings  |  200 / 1996761 | 218 / 4837323 | 219 / 4837559  |  так
+forest  |  200 / 2032625 | 237 / 5276962 | 237 / 5291326  |  так
+glacier  |  200 / 2183923 | 276 / 6135652 | 277 / 6157250  |  так
+mountain  |  200 / 1950345 | 262 / 5789535 | 263 / 5849765  |  так
+sea  |  200 / 1987613 | 255 / 5655068 | 255 / 5668011  |  так
+street  |  200 / 1841817 | 250 / 5541845 | 251 / 5547533  |  так
+Разом: [{'part': 'train', 'count': 1200, 'sum': 11993084}, {'part': 'validation', 'count': 1498, 'sum': 33236385}, {'part': 'test', 'count': 1502, 'sum': 33351444}] ; перетинів немає
+Початкова втрата: {'regime': 'scratch', 'seed': 1, 'loss': 2.047884464263916, 'ln6': 1.791759469228055, 'deviation': 0.25612499503586106}
+Початкова втрата: {'regime': 'frozen', 'seed': 1, 'loss': 1.9243943691253662, 'ln6': 1.791759469228055, 'deviation': 0.13263489989731125}
+Параметри: scratch 11179590 11179590 [(11179590, 0.003)]
+Параметри: frozen 11179590 3078 [(3078, 0.003)]
+Параметри: unfreeze 11179590 8396806 [(3078, 0.003), (8393728, 0.0003)]
+Зміни: {'regime': 'frozen', 'module': 'conv1', 'parameters_changed': False, 'bn_statistics_changed': None, 'match': True}
+Зміни: {'regime': 'frozen', 'module': 'bn1', 'parameters_changed': False, 'bn_statistics_changed': False, 'match': True}
+Зміни: {'regime': 'frozen', 'module': 'layer1', 'parameters_changed': False, 'bn_statistics_changed': False, 'match': True}
+Зміни: {'regime': 'frozen', 'module': 'layer2', 'parameters_changed': False, 'bn_statistics_changed': False, 'match': True}
+Зміни: {'regime': 'frozen', 'module': 'layer3', 'parameters_changed': False, 'bn_statistics_changed': False, 'match': True}
+Зміни: {'regime': 'frozen', 'module': 'layer4', 'parameters_changed': False, 'bn_statistics_changed': False, 'match': True}
+Зміни: {'regime': 'frozen', 'module': 'fc', 'parameters_changed': True, 'bn_statistics_changed': None, 'match': True}
+Зміни: {'regime': 'unfreeze', 'module': 'conv1', 'parameters_changed': False, 'bn_statistics_changed': None, 'match': True}
+Зміни: {'regime': 'unfreeze', 'module': 'bn1', 'parameters_changed': False, 'bn_statistics_changed': False, 'match': True}
+Зміни: {'regime': 'unfreeze', 'module': 'layer1', 'parameters_changed': False, 'bn_statistics_changed': False, 'match': True}
+Зміни: {'regime': 'unfreeze', 'module': 'layer2', 'parameters_changed': False, 'bn_statistics_changed': False, 'match': True}
+Зміни: {'regime': 'unfreeze', 'module': 'layer3', 'parameters_changed': False, 'bn_statistics_changed': False, 'match': True}
+Зміни: {'regime': 'unfreeze', 'module': 'layer4', 'parameters_changed': True, 'bn_statistics_changed': True, 'match': True}
+Зміни: {'regime': 'unfreeze', 'module': 'fc', 'parameters_changed': True, 'bn_statistics_changed': None, 'match': True}
+Прогноз до запуску: параметри замороженого кістяка не зміняться, але його ковзні статистики BN змінюватимуться: це буфери, на які requires_grad не впливає. На кривій втрати train цю помилку, ймовірно, не буде помітно.
+Зміни: {'regime': 'frozen', 'module': 'conv1', 'parameters_changed': False, 'bn_statistics_changed': None, 'match': True}
+Зміни: {'regime': 'frozen', 'module': 'bn1', 'parameters_changed': False, 'bn_statistics_changed': True, 'match': True}
+Зміни: {'regime': 'frozen', 'module': 'layer1', 'parameters_changed': False, 'bn_statistics_changed': True, 'match': True}
+Зміни: {'regime': 'frozen', 'module': 'layer2', 'parameters_changed': False, 'bn_statistics_changed': True, 'match': True}
+Зміни: {'regime': 'frozen', 'module': 'layer3', 'parameters_changed': False, 'bn_statistics_changed': True, 'match': True}
+Зміни: {'regime': 'frozen', 'module': 'layer4', 'parameters_changed': False, 'bn_statistics_changed': True, 'match': True}
+Зміни: {'regime': 'frozen', 'module': 'fc', 'parameters_changed': True, 'bn_statistics_changed': None, 'match': True}
+Навмисна помилка BN, max |Δ|: {'running_mean': 0.09283638000488281, 'running_var': 0.12031435966491699}
+Усі перевірки п.1–2: OK
+scratch seed=1 | епоха 1/8 | loss=1.617149382 | val macro-F1=0.287448693 | 7.54 с
+scratch seed=1 | епоха 2/8 | loss=1.249406174 | val macro-F1=0.314062964 | 6.33 с
+scratch seed=1 | епоха 3/8 | loss=1.206824795 | val macro-F1=0.377047852 | 6.16 с
+scratch seed=1 | епоха 4/8 | loss=1.111107283 | val macro-F1=0.470787584 | 5.98 с
+scratch seed=1 | епоха 5/8 | loss=1.077976414 | val macro-F1=0.528363246 | 5.81 с
+scratch seed=1 | епоха 6/8 | loss=1.057175239 | val macro-F1=0.375457188 | 5.81 с
+scratch seed=1 | епоха 7/8 | loss=1.046334319 | val macro-F1=0.624308772 | 5.94 с
+scratch seed=1 | епоха 8/8 | loss=1.029304334 | val macro-F1=0.520520294 | 6.06 с
+frozen seed=1 | епоха 1/8 | loss=0.640539245 | val macro-F1=0.878060492 | 3.11 с
+frozen seed=1 | епоха 2/8 | loss=0.274754659 | val macro-F1=0.888541958 | 3.02 с
+frozen seed=1 | епоха 3/8 | loss=0.237404477 | val macro-F1=0.881041034 | 3.03 с
+frozen seed=1 | епоха 4/8 | loss=0.216654765 | val macro-F1=0.879204550 | 3.03 с
+frozen seed=1 | епоха 5/8 | loss=0.189873395 | val macro-F1=0.884214307 | 3.03 с
+frozen seed=1 | епоха 6/8 | loss=0.195364909 | val macro-F1=0.884553839 | 3.06 с
+frozen seed=1 | епоха 7/8 | loss=0.185144781 | val macro-F1=0.886375039 | 3.04 с
+frozen seed=1 | епоха 8/8 | loss=0.165452499 | val macro-F1=0.884201244 | 3.44 с
+frozen seed=2 | епоха 1/8 | loss=0.651648463 | val macro-F1=0.881626497 | 3.14 с
+frozen seed=2 | епоха 2/8 | loss=0.280369155 | val macro-F1=0.884933824 | 3.04 с
+frozen seed=2 | епоха 3/8 | loss=0.240089917 | val macro-F1=0.881629408 | 3.03 с
+frozen seed=2 | епоха 4/8 | loss=0.213359138 | val macro-F1=0.874775371 | 3.07 с
+frozen seed=2 | епоха 5/8 | loss=0.202546309 | val macro-F1=0.879445828 | 3.02 с
+frozen seed=2 | епоха 6/8 | loss=0.183061297 | val macro-F1=0.883799349 | 3.03 с
+frozen seed=2 | епоха 7/8 | loss=0.171461088 | val macro-F1=0.875898084 | 3.02 с
+frozen seed=2 | епоха 8/8 | loss=0.175655503 | val macro-F1=0.878500329 | 3.03 с
+frozen seed=3 | епоха 1/8 | loss=0.687974886 | val macro-F1=0.885788693 | 3.09 с
+frozen seed=3 | епоха 2/8 | loss=0.291204883 | val macro-F1=0.889028710 | 3.06 с
+frozen seed=3 | епоха 3/8 | loss=0.247351534 | val macro-F1=0.892482772 | 3.03 с
+frozen seed=3 | епоха 4/8 | loss=0.224882078 | val macro-F1=0.872584816 | 3.02 с
+frozen seed=3 | епоха 5/8 | loss=0.207040562 | val macro-F1=0.876728095 | 3.03 с
+frozen seed=3 | епоха 6/8 | loss=0.206608667 | val macro-F1=0.876567628 | 3.08 с
+frozen seed=3 | епоха 7/8 | loss=0.176137422 | val macro-F1=0.889979148 | 3.06 с
+frozen seed=3 | епоха 8/8 | loss=0.189583163 | val macro-F1=0.888595570 | 3.16 с
+unfreeze seed=1 | епоха 1/8 | loss=0.542986948 | val macro-F1=0.896345646 | 3.62 с
+unfreeze seed=1 | епоха 2/8 | loss=0.193933895 | val macro-F1=0.892084600 | 3.52 с
+unfreeze seed=1 | епоха 3/8 | loss=0.115634368 | val macro-F1=0.873536953 | 3.90 с
+unfreeze seed=1 | епоха 4/8 | loss=0.092110199 | val macro-F1=0.895941059 | 3.53 с
+unfreeze seed=1 | епоха 5/8 | loss=0.053502975 | val macro-F1=0.898036298 | 3.53 с
+unfreeze seed=1 | епоха 6/8 | loss=0.072640692 | val macro-F1=0.893979159 | 3.52 с
+unfreeze seed=1 | епоха 7/8 | loss=0.075458373 | val macro-F1=0.897124616 | 3.52 с
+unfreeze seed=1 | епоха 8/8 | loss=0.062740963 | val macro-F1=0.888832309 | 3.53 с
+unfreeze seed=2 | епоха 1/8 | loss=0.555714406 | val macro-F1=0.902088659 | 3.61 с
+unfreeze seed=2 | епоха 2/8 | loss=0.161081268 | val macro-F1=0.896839301 | 3.53 с
+unfreeze seed=2 | епоха 3/8 | loss=0.121821461 | val macro-F1=0.894908378 | 3.54 с
+unfreeze seed=2 | епоха 4/8 | loss=0.091745172 | val macro-F1=0.892608015 | 3.55 с
+unfreeze seed=2 | епоха 5/8 | loss=0.118309759 | val macro-F1=0.892217601 | 3.53 с
+unfreeze seed=2 | епоха 6/8 | loss=0.104697099 | val macro-F1=0.889626489 | 3.53 с
+unfreeze seed=2 | епоха 7/8 | loss=0.103380286 | val macro-F1=0.885452771 | 3.52 с
+unfreeze seed=2 | епоха 8/8 | loss=0.108879792 | val macro-F1=0.888424004 | 3.55 с
+unfreeze seed=3 | епоха 1/8 | loss=0.530216306 | val macro-F1=0.808187686 | 3.73 с
+unfreeze seed=3 | епоха 2/8 | loss=0.206666595 | val macro-F1=0.899080001 | 3.56 с
+unfreeze seed=3 | епоха 3/8 | loss=0.116223243 | val macro-F1=0.884391381 | 4.02 с
+unfreeze seed=3 | епоха 4/8 | loss=0.098308482 | val macro-F1=0.906677639 | 3.54 с
+unfreeze seed=3 | епоха 5/8 | loss=0.077393994 | val macro-F1=0.896862055 | 3.58 с
+unfreeze seed=3 | епоха 6/8 | loss=0.069660031 | val macro-F1=0.884711688 | 3.52 с
+unfreeze seed=3 | епоха 7/8 | loss=0.072441760 | val macro-F1=0.889673966 | 3.52 с
+unfreeze seed=3 | епоха 8/8 | loss=0.132129055 | val macro-F1=0.890579270 | 3.53 с
+Середні validation: {'scratch': 0.5205202944552059, 'frozen': 0.8837657141829945, 'unfreeze': 0.8892785279659653}
+Вибрано лише за validation: unfreeze_seed3
+TRAIN OK: рівно сім запусків, кожен 8 епох і 304 кроки. Test не обчислювався.

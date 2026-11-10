@@ -1,0 +1,102 @@
+{
+  "status": "OK",
+  "smoke_ok": true,
+  "analysis_outputs_identical": true,
+  "analysis_reports_identical": true,
+  "test_logits_sha256": "cab8588988b100d93cff35b00c88470da78a831862e3bcde999c3b2ba9e3eb14",
+  "training_run_count": 7,
+  "training_epoch_count": 56,
+  "optimizer_steps_per_run": 304,
+  "source_sha256": "b4928d67b5d7b46f44b1fdf46709eb54a66ea60c40d4ecb9c7eda45ae3f49296",
+  "split_sha256": "148dad92de9a18670c177df9f8757aa6519fb0ea6d74a8ba723cfc4453f0a1bc",
+  "device": "mps",
+  "device_name": "Apple M5",
+  "test_device": "cpu",
+  "resume_from_repository_root_ok": true,
+  "dataset": {
+    "files": 17034,
+    "small_images": 55,
+    "content_sha256_before": "60dbbedc94585a7fe66f633b169a5da7e72f00f45dabaf4ee4044928178893f8",
+    "content_sha256_after": "60dbbedc94585a7fe66f633b169a5da7e72f00f45dabaf4ee4044928178893f8",
+    "unchanged": true,
+    "bytes": 258258913
+  },
+  "figures": {
+    "batch_check.png": {
+      "bytes": 2116720,
+      "visually_reviewed": true
+    },
+    "curves.png": {
+      "bytes": 179662,
+      "visually_reviewed": true
+    },
+    "confusion_matrix.png": {
+      "bytes": 85369,
+      "visually_reviewed": true
+    },
+    "top5_errors.png": {
+      "bytes": 386021,
+      "visually_reviewed": true
+    }
+  },
+  "git_write_operations_performed": false,
+  "git_repository_absent": true,
+  "large_files": {
+    "model_bytes": 44793995,
+    "model_sha256": "7d1d2b54a326c40e4f1d60c5546c46c2e2bec80c58bbdf7a46a8d8c91cc78fa0",
+    "local_ignored_weights": 7,
+    "unexpected": []
+  },
+  "specification_deviations": [],
+  "readme_numbers_match_analysis_output": true,
+  "readme_sha256": "e7b9407182e2f257c3906536f1bd157d75f63a38917ed17d26e0c61754951c34",
+  "analysis_portability": {
+    "status": "OK",
+    "tests_run": 7,
+    "clean_copy_without_run_weights": true,
+    "changed_logits_rejected": true,
+    "changed_predictions_rejected": true,
+    "wrong_seed_rejected": true,
+    "original_metrics_unchanged": true,
+    "training_artifacts_unchanged": true,
+    "analyze_sha256": "c6e3c1a84df2c99814ee57d2325e7f869c8ef62712f48a1f26b007e1ea4705cd",
+    "tests_sha256": "988de64745cfb57072ba790296728a39d02d38f1680df0f82b01180904520a0c",
+    "selection_verification": {
+      "method": "cpu_validation_logits",
+      "rtol": 0.0001,
+      "atol": 0.0001,
+      "max_abs_difference": 6.29425048828125e-05,
+      "matching_predictions": 1498,
+      "validation_rows": 1498,
+      "requires_local_run_weights": false
+    },
+    "verified_again_with_teacher_workflow": true
+  },
+  "teacher_workflow": {
+    "status": "OK",
+    "regression_tests_total": 11,
+    "teacher_workflow_tests": 4,
+    "new_experiment_uses_separate_directory": true,
+    "fresh_training_dispatches_all_seven_runs": true,
+    "fresh_training_dispatches_checks": true,
+    "resume_skips_only_complete_runs": true,
+    "analysis_reads_selected_directory": true,
+    "relative_output_path_is_script_relative": true,
+    "existing_results_rejected_before_writes": true,
+    "dataset_output_directory_rejected": true,
+    "training_dispatch_uses_test_fixture": true,
+    "full_real_training_repeated": false,
+    "full_cpu_analysis_in_temporary_copies": true,
+    "training_function_ast_unchanged": true,
+    "original_artifacts_preserved": 38,
+    "original_metrics_unchanged": true,
+    "dataset_content_unchanged": true,
+    "current_training_source_sha256": "fa341bd4ed3416f89a919bb7972bbe15b5327d3ce0d0120415369554fb7c076f",
+    "historical_training_source_sha256": "b4928d67b5d7b46f44b1fdf46709eb54a66ea60c40d4ecb9c7eda45ae3f49296",
+    "source_hash_note": "Історичні журнали містять початковий хеш. Поточний хеш відрізняється через інтерфейс --output-dir; чисельний цикл навчання незмінний.",
+    "train_sha256": "4e8256164fa142e9b47538cfc63f89b214e8121224c1dbeadc0e66603504cba7",
+    "analyze_sha256": "c6e3c1a84df2c99814ee57d2325e7f869c8ef62712f48a1f26b007e1ea4705cd",
+    "tests_sha256": "8ae2443d07f2c4ff15956991ab9c0ccb339c2293a2a63457078f9f4e79784180",
+    "tests_log_sha256": "b68cdcb12fa3553f70e082a9f692743d288516ea9b3b12c79cb6ffa57b6ead8f"
+  }
+}
